@@ -12,8 +12,6 @@ namespace IndianStateCensusAnalyzer.POCO
             {
                 case (CensusAnalyzer.Country.INDIA):
                     return new IndianCensusAdapter().LoadCensusData(csvFilePath, dataHeader);
-                //case (CensusAnalyzer.Country.US):
-                //return new USCensusAdapter().LoadCensusData(csvFilePath, dataHeader);
                 default:
                     throw new CensusAnalyzerException("No such country", CensusAnalyzerException.ExceptionType.NO_SUCH_COUNTRY);
             }

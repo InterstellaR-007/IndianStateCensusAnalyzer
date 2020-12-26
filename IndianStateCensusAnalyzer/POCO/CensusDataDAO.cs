@@ -4,6 +4,9 @@ using System.Text;
 
 namespace IndianStateCensusAnalyzer.POCO
 {
+    /// <summary>
+    /// Census Data Data Access Object Model Class
+    /// </summary>
     public class CensusDataDAO
     {
         public string state;
@@ -11,6 +14,13 @@ namespace IndianStateCensusAnalyzer.POCO
         public long area;
         public long density;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CensusDataDAO"/> class.
+        /// </summary>
+        /// <param name="state">The state.</param>
+        /// <param name="population">The population.</param>
+        /// <param name="area">The area.</param>
+        /// <param name="density">The density.</param>
         public CensusDataDAO(string state, string population , string area, string density)
         {
             this.state = state;
