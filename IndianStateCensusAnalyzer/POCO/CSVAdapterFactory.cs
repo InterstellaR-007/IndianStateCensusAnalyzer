@@ -4,6 +4,9 @@ using System.Text;
 
 namespace IndianStateCensusAnalyzer.POCO
 {
+    /// <summary>
+    /// CSV File Adapter Class
+    /// </summary>
     public class CSVAdapterFactory
     {
         public Dictionary<string,CensusDTO> LoadCsvData(CensusAnalyzer.Country country,string csvFilePath,string dataHeader)

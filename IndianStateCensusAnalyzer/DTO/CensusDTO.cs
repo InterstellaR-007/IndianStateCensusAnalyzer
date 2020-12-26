@@ -4,6 +4,9 @@ using System.Text;
 
 namespace IndianStateCensusAnalyzer.POCO
 {
+    /// <summary>
+    /// Census Data Transfer Object Class
+    /// </summary>
     public class CensusDTO
     {
         public int serialNumber;
@@ -20,6 +23,10 @@ namespace IndianStateCensusAnalyzer.POCO
         public double populationDensity;
         public double housingDensity;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CensusDTO"/> class.
+        /// </summary>
+        /// <param name="stateCodeDao">The state code DAO.</param>
         public CensusDTO(StateCodeDAO stateCodeDao)
         {
             this.serialNumber = stateCodeDao.serialNumber;
@@ -27,6 +34,10 @@ namespace IndianStateCensusAnalyzer.POCO
             this.tin = stateCodeDao.tin;
             this.stateCode = stateCodeDao.stateCode;
         }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CensusDTO"/> class.
+        /// </summary>
+        /// <param name="censusDataDao">The census data DAO.</param>
         public CensusDTO(CensusDataDAO censusDataDao)
         {
             this.state = censusDataDao.state;
